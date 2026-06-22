@@ -1,0 +1,206 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    
+    /* FULL-PAGE BACKGROUND COLOR */
+    background-color: #f5f4f0; 
+    
+    color: #111;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    border-bottom: 4px double #111;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin: 5px 0;
+}
+
+.newspaper-meta {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.date-line {
+    border-top: 1px solid #111;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #111;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Layout Grid */
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main Content Area */
+.headline-story h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.byline {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+figure {
+    margin-bottom: 15px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%); /* Keeps the vintage print press aesthetic */
+    border: 1px solid #111;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+    text-indent: 20px; /* Standard print journalism paragraph indentation */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.secondary-story h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    border-left: 1px solid #111;
+    padding-left: 20px;
+}
+
+.sidebar-block {
+    margin-bottom: 30px;
+}
+
+.sidebar-block h3, .sidebar-block h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #111;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar-block ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.sidebar-block ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-block ul li a {
+    color: #111;
+    text-decoration: none;
+}
+
+.sidebar-block ul li a:hover {
+    text-decoration: underline;
+}
+
+.advertisement {
+    background-color: #eaddca; /* Slightly darker shade for the ad block box */
+    padding: 15px;
+    border: 1px dashed #111;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+cite {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    border-top: 4px double #111;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #111;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .newspaper-grid {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        border-left: none;
+        border-top: 2px solid #111;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
